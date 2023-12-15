@@ -35,6 +35,7 @@ You may need to authorize your application.
 
 ## PROXY WEBSITES
 ### Official (by Freeplaygames)
-[freeplaygames.pages.dev](https://freeplaygames.pages.dev)<Br>
+[freeplaygames.pages.dev](https://freeplaygames.pages.dev)<br>
+[freeplay2293.pages.dev](https://freeplay2293.pages.dev)<br>
 ### Unverified
 **Freeplaygames does not endorse, sponsor, or manage these proxies. Beware.**<br>
