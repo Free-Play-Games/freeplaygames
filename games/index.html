@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .game-box {
+            border: 1px solid #fff;
+            padding: 10px;
+            margin: 10px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .no-image-box {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://games.freeplaygames.pages.dev/gamelist.json') // Replace with your JSON file path
+                .then(response => response.json())
+                .then(data => displayGames(data.games));
+        });
+
+        function displayGames(games) {
+            games.forEach(game => {
+                if (game['game-image-tf']) {
+                    displayGameBox(game);
+                }
+            });
+
+            games.forEach(game => {
+                if (!game['game-image-tf']) {
+                    displayNoImageBox(game);
+                }
+            });
+        }
+
+        function displayGameBox(game) {
+            const gameBox = document.createElement('div');
+            gameBox.classList.add('game-box');
+            gameBox.innerHTML = `
+                <h2>${game.gameName}</h2>
+                <p><a href="${game['gameURL']}">Play ${game.gameName}</a></p>
+                <img src="${game['game-image-url']}" alt="${game.gameName}" style="max-width: 100%;">
+            `;
+            document.body.appendChild(gameBox);
+        }
+
+        function displayNoImageBox(game) {
+            const noImageBox = document.createElement('div');
+            noImageBox.classList.add('no-image-box');
+            noImageBox.innerHTML = `
+                <h2>${game.gameName}</h2>
+                <p><a href="${game['gameURL']}">Play ${game.gameName}</a></p>
+                <p>No image available for this game.</p>
+            `;
+            document.body.appendChild(noImageBox);
+        }
+    </script>
+</body>
+</html>
