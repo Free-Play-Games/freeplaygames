@@ -1,0 +1,23 @@
+{
+  "games": [
+    {
+      "gameName": "Game1",
+      "gameURL": "https://game.freeplaygames.pages.dev/play/Game1/",
+      "game-image-tf": true,
+      "game-image-url": "https://cdn.freeplaygames.pages.dev/game-images/Game1.png"
+    },
+    {
+      "gameName": "Game2",
+      "gameURL": "https://game.freeplaygames.pages.dev/play/Game2/",
+      "game-image-tf": false,
+      "game-image-url": ""
+    },
+    {
+      "gameName": "Game3",
+      "gameURL": "https://game.freeplaygames.pages.dev/play/Game3/",
+      "game-image-tf": true,
+      "game-image-url": "https://cdn.freeplaygames.pages.dev/game-images/Game3.png"
+    }
+    // Add more games as needed
+  ]
+}
