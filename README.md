@@ -1,4 +1,5 @@
 # Freeplaygames
+[![Scan Repositories for Games](https://github.com/Free-Play-Games/freeplaygames/actions/workflows/scan.yml/badge.svg)](https://github.com/Free-Play-Games/freeplaygames/actions/workflows/scan.yml)
 ## Information about Freeplaygames
 Freeplaygames requires the following websites to be unblocked in order for Freeplaygames to function correctly.
 **Top Level Domains**
