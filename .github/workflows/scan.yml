@@ -1,0 +1,32 @@
+name: Scan Repositories for Games
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Schedule to run daily, adjust as needed
+
+jobs:
+  scan-repositories:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Scan Repositories
+        run: node scanRepositories.js
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add -A
+          git commit -m "Update games.json"
+          git push
