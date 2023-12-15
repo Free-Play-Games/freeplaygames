@@ -1,0 +1,22 @@
+{
+  "repositories": [
+    {
+      "url": "https://github.com/sigmasecstorage/SigmaGames-GameStorage1"
+    },
+    {
+      "url": "https://github.com/sigmasecstorage/SigmaGames-GameStorage2"
+    },
+    {
+      "url": "https://github.com/sigmasecstorage/SigmaGames-GameStorage3"
+    },
+    {
+      "url": "https://github.com/sigmasecstorage/SigmaGames-GameStorage4"
+    },
+    {
+      "url": "https://github.com/sigmasecstorage/SigmaGames-GameStorage5"
+    },
+    {
+      "url": "https://github.com/sigmasecstorage/SigmaGames-GameStorage6"
+    }
+  ]
+}
